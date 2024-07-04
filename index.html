@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="send_email.js"></script>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <h2>Alberto Stan</h2>
+            <ul id="sideMenu">
+                <li><a href="#home-container">Home</a></li>
+                <li><a href="#about-container">About Me</a></li>
+                <li><a href="#projects-container">Projects</a></li>
+                <li><a href="#contact-container">Contact Me</a></li>
+                <i class="fas fa-times" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+        </nav>
+    </div>
+    <div id="home-container">
+        
+        <div class="profile-image">
+            <img src="./images/DKID9378.JPG">
+        </div>
+        <div class="profile-text">
+            <p>Front-End Developer</p><br>
+            <h1>Turning Ideas into Beautiful Websites</h1>
+        </div>
+    </div>
+
+    <div id="about-container">
+        <h1>About Me</h1><br>
+        <p>Hi, my name is Alberto Stan and I am a beginner web developer. For about a year now, I have been dedicated to studying the basic languages of web development - HTML, CSS, and JavaScript. During this time, I have managed to acquire fundamental knowledge and create my first projects, which have helped me improve my skills and increase my confidence in my abilities. I am passionate about creating attractive and functional web interfaces and am always looking for opportunities to learn and grow professionally. I look forward to exploring more technologies and continuing to grow in this dynamic and innovative field.
+        </p><br>
+        <div class="tab-links">
+            <div class="tab skills active" data-tab="skills">Skills</div>
+            <div class="tab experience" data-tab="experience">Experience</div>
+            <div class="tab education" data-tab="education">Education</div>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li><span>Web Development</span></li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>September 2021 - Iuly 2023</span><br>Customer and Operation Manager at BRD Groupe Societe Generale</li>
+                <li><span>August 2018 - August 2021</span><br>Call Center Operator at Pro Solution Leasing</li>
+                <li><span>May 2018 - August 2018</span><br>Waiter at Restaurant Ciobanasul Craiova</li>
+
+            </ul>
+        </div>
+        <div class="tab-contents" id="education">
+            <ul>
+                <li><span>Bachelor`s degree</span><br>Geography of Tourism</li>
+                <li><span>freeCodeCamp Course</span><br>Learn JavaScript - Full Course for Beginners</li>
+                <li><span>JavaScript.info</span><br>The Modern JavaScript Tutorial</li>
+                <li><span>The Odin Project</span><br>JavaScript Course</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="projects-container">
+        <h1>My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./images/Fără titlu.png">
+                <div class="layer">
+                    <h3>Wedding Invitation</h3>
+                    <p>This is a concept of wedding invitation</p>
+                    <a href="https://albertostan.github.io/alberto-lavinia/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./images/game.png">
+                <div class="layer">
+                    <h3>Game</h3>
+                    <p>I created my first game using HTML5 Canvas. It's a simple project with basic functionality, but it helped me learn how to draw and animate graphics using JavaScript. It's a modest start in game development, but an important step in my learning process.</p>
+                    <a href="https://albertostan.github.io/2D-Game/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./images/iphone.png">
+                <div class="layer">
+                    <h3>iPhone</h3>
+                    <p>I created a simple replica of a phone using HTML, CSS, and JavaScript. This replica includes several functional applications such as a clock, message app, calculator, and camera. Although basic, the project helped me learn how to develop mobile interfaces and implement fundamental functionalities.</p>
+                    <a href="https://albertostan.github.io/iPhone/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-container">
+        
+        <div class="contact">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> albertostan97@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +40771142913</p>
+                <a href="./images/CV_Stan_Alberto Costinel _en.pdf" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form id="contactForm" onsubmit="sendEmail(event);">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
